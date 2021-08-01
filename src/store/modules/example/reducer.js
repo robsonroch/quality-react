@@ -4,17 +4,17 @@ const initialState = {
   botaoClicado: false,
 };
 
-export default function (state = initialState, action) {
+export default function(state = initialState, action) {
   switch (action.type) {
     case types.BOTAO_CLICADO_SUCCESS: {
-      console.log('Successo!');
+      console.log('Sucesso');
       const newState = { ...state };
       newState.botaoClicado = !newState.botaoClicado;
       return newState;
     }
 
     case types.BOTAO_CLICADO_FAILURE: {
-      console.log('Deu erro!');
+      console.log('Deu erro =(');
       return state;
     }
 
@@ -23,7 +23,8 @@ export default function (state = initialState, action) {
       return state;
     }
 
-    default:
+    default: {
       return state;
+    }
   }
 }
